@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HealthRec サポート - よくあるご質問とお問い合わせ">
+<title>サポート | HealthRec</title>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --blue: #007AFF;
+  --blue-light: rgba(0, 122, 255, 0.12);
+  --green: #34C759;
+  --orange: #FF9500;
+  --dark: #000000;
+  --dark-card: #1C1C1E;
+  --dark-secondary: #2C2C2E;
+  --gray-100: #F5F5F7;
+  --gray-200: #E5E5EA;
+  --gray-300: #D1D1D6;
+  --gray-500: #86868B;
+  --text-primary: #1D1D1F;
+  --text-secondary: #86868B;
+  --white: #FFFFFF;
+  --content-max: 800px;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  color: var(--text-primary);
+  background: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container { max-width: var(--content-max); margin: 0 auto; padding: 0 24px; }
+
+/* ===== Header ===== */
+.site-header {
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--gray-200);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 16px 24px;
+}
+.header-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+.header-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.header-name {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.header-back {
+  font-size: 14px;
+  color: var(--blue);
+  text-decoration: none;
+}
+.header-back:hover { opacity: 0.75; }
+
+/* ===== Page Hero ===== */
+.page-hero {
+  background: linear-gradient(180deg, var(--gray-100) 0%, var(--white) 100%);
+  padding: 64px 24px 48px;
+  text-align: center;
+  border-bottom: 1px solid var(--gray-200);
+}
+.page-hero-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+.page-hero-title {
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+}
+.page-hero-subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ===== Main Content ===== */
+.page-content {
+  padding: 56px 0 80px;
+}
+
+.section-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 24px;
+}
+
+/* ===== FAQ ===== */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 56px;
+}
+
+details {
+  border-bottom: 1px solid var(--gray-200);
+  background: var(--white);
+}
+details:last-child { border-bottom: none; }
+
+summary {
+  padding: 20px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: background 0.15s ease;
+  user-select: none;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after {
+  content: '+';
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--blue);
+  flex-shrink: 0;
+  transition: transform 0.25s var(--ease-out-expo);
+}
+details[open] summary { background: var(--blue-light); }
+details[open] summary::after { transform: rotate(45deg); }
+summary:hover { background: var(--gray-100); }
+details[open] summary:hover { background: var(--blue-light); }
+
+.faq-answer {
+  padding: 0 24px 20px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+.faq-answer p + p { margin-top: 12px; }
+.faq-answer a { color: var(--blue); text-decoration: none; }
+.faq-answer a:hover { text-decoration: underline; }
+
+/* ===== Contact ===== */
+.contact-card {
+  background: var(--gray-100);
+  border-radius: 16px;
+  padding: 40px 32px;
+  text-align: center;
+}
+.contact-icon { font-size: 40px; margin-bottom: 16px; }
+.contact-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.contact-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 980px;
+  text-decoration: none;
+  transition: transform 0.25s var(--ease-out-expo), box-shadow 0.25s ease;
+  box-shadow: 0 4px 16px rgba(0, 122, 255, 0.3);
+}
+.contact-btn:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 24px rgba(0, 122, 255, 0.45);
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: var(--gray-100);
+  padding: 40px 24px;
+  text-align: center;
+  border-top: 1px solid var(--gray-200);
+}
+.footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.footer-icon { width: 28px; height: 28px; border-radius: 7px; object-fit: cover; }
+.footer-name { font-size: 16px; font-weight: 700; letter-spacing: -0.02em; }
+.footer-copyright { font-size: 12px; color: var(--text-secondary); margin-bottom: 16px; }
+.footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+.footer-links a { font-size: 13px; color: var(--text-secondary); text-decoration: none; }
+.footer-links a:hover { opacity: 0.7; }
+.footer-legal { font-size: 11px; color: var(--gray-300); max-width: 560px; margin: 0 auto; line-height: 1.6; }
+
+@media (max-width: 600px) {
+  .page-hero { padding: 48px 24px 36px; }
+  .contact-card { padding: 32px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="header-brand">
+      <img src="images/icon.png" alt="HealthRec" class="header-icon">
+      <span class="header-name">HealthRec</span>
+    </a>
+    <a href="index.html" class="header-back">← ホームに戻る</a>
+  </div>
+</header>
+
+<!-- ==================== PAGE HERO ==================== -->
+<div class="page-hero">
+  <div class="page-hero-icon">🛟</div>
+  <h1 class="page-hero-title">サポート</h1>
+  <p class="page-hero-subtitle">よくあるご質問と、お問い合わせ先のご案内です。</p>
+</div>
+
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="page-content">
+  <div class="container">
+
+    <!-- FAQ -->
+    <p class="section-label">よくあるご質問</p>
+
+    <div class="faq-list">
+
+      <details>
+        <summary>ヘルスケアデータが表示されません</summary>
+        <div class="faq-answer">
+          <p>HealthRecはApple HealthKitのデータを読み込んでいます。以下をご確認ください。</p>
+          <p>①「設定」アプリ → 「ヘルスケア」→「データアクセスとデバイス」→「HealthRec」でデータの読み込みが許可されているか確認してください。</p>
+          <p>②Apple Health（ヘルスケアアプリ）にデータが記録されているか確認してください。Apple WatchやサードパーティアプリのデータはHealthKitを経由して表示されます。</p>
+          <p>③設定画面の「ヘルスケアデータ」から、表示したいデータ種類を選択してください。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>カレンダーの予定が表示されません</summary>
+        <div class="faq-answer">
+          <p>カレンダーへのアクセス許可と表示設定をご確認ください。</p>
+          <p>①「設定」アプリ → 「HealthRec」→「カレンダー」で「フルアクセス」が許可されているか確認してください。</p>
+          <p>②設定画面の「カレンダー」から、表示したいカレンダーが選択されているか確認してください。「すべて選択」で全カレンダーを表示できます。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Premiumプランとは何ですか？</summary>
+        <div class="faq-answer">
+          <p>HealthRecには無料プランとPremiumプランがあります。</p>
+          <p><strong>無料プラン：</strong>睡眠データ・睡眠スコア、ヘルスケアデータ（2種類まで）、カレンダー連携、症状記録、テーマカスタマイズを利用できます。</p>
+          <p><strong>Premiumプラン：</strong>102種類すべてのヘルスケアデータの表示と、今後追加される新機能が利用できます。月額・年額プランをご用意しています。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>サブスクリプションを解約したい</summary>
+        <div class="faq-answer">
+          <p>サブスクリプションはApp Store（Apple ID）で管理されています。以下の手順で解約できます。</p>
+          <p>① iPhoneの「設定」アプリ → 上部のApple IDをタップ → 「サブスクリプション」→「HealthRec」→「サブスクリプションをキャンセルする」</p>
+          <p>解約後も現在の請求期間の終了まで引き続きPremium機能をご利用いただけます。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>データはどこに保存されますか？</summary>
+        <div class="faq-answer">
+          <p>HealthRecが読み込むデータはすべてデバイス上のApple HealthKit・カレンダーから取得しており、外部サーバーへの送信は行っておりません。</p>
+          <p>症状記録はiPhone内のアプリデータとして保存されます。アプリを削除すると症状記録も削除されますのでご注意ください。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Apple Watchには対応していますか？</summary>
+        <div class="faq-answer">
+          <p>HealthRecはiPhone専用アプリです（Apple Watch単体アプリは提供していません）。</p>
+          <p>ただし、Apple WatchがiPhoneと連携してHealthKitに記録したデータ（心拍数・歩数・睡眠など）はHealthRecで表示できます。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>アプリを削除するとデータは消えますか？</summary>
+        <div class="faq-answer">
+          <p>Apple HealthKitのデータ（歩数・心拍数・睡眠など）はHealthKitに保存されているため、アプリを削除してもデータは残ります。</p>
+          <p>症状記録などアプリ内に保存しているデータはアプリ削除時に削除されます。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>対応しているiOSバージョンを教えてください</summary>
+        <div class="faq-answer">
+          <p>HealthRecはiOS 17以降に対応しています。最新のiOSへのアップデートを推奨しています。</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- Contact -->
+    <p class="section-label">お問い合わせ</p>
+    <div class="contact-card">
+      <div class="contact-icon">✉️</div>
+      <h2 class="contact-title">お気軽にご連絡ください</h2>
+      <p class="contact-desc">
+        上記FAQで解決しない場合は、メールにてお問い合わせください。<br>
+        通常2〜3営業日以内にご返答いたします。
+      </p>
+      <!-- TODO: メールアドレスを設定してください -->
+      <a href="mailto:support@healthrec.app" class="contact-btn">
+        メールで問い合わせる
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+  <div class="footer-brand">
+    <img src="images/icon.png" alt="HealthRec" class="footer-icon">
+    <span class="footer-name">HealthRec</span>
+  </div>
+  <p class="footer-copyright">&copy; 2026 HealthRec. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="index.html">ホーム</a>
+    <a href="privacy.html">プライバシーポリシー</a>
+    <a href="terms.html">利用規約</a>
+    <a href="support.html">サポート</a>
+  </div>
+  <p class="footer-legal">Apple、HealthKit、Apple Watch、iOSは Apple Inc. の商標です。本アプリは医療機器ではなく、医療上の助言、診断、治療を提供するものではありません。</p>
+</footer>
+
+</body>
+</html>
